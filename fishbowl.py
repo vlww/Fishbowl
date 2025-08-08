@@ -196,7 +196,6 @@ def clear_screen():
 def spirograph(duration=10):
     print(spacer1)
     print(a1)
-    print(spacer2)
     clear_screen()
     pen.goto(0,0)
     hue_steps = 72
