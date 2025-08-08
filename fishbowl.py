@@ -152,6 +152,8 @@ a6 = r"""      _  ___ ___ _   _
   \____|_____\___/|____/(_)                               
                                                           """
 
+spacer1 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+spacer2="\n\n\n\n\n\n\n\n\n\n"
 
 time.sleep(2)
 
@@ -192,7 +194,9 @@ def clear_screen():
     pen.pendown()
 
 def spirograph(duration=10):
+    print(spacer1)
     print(a1)
+    print(spacer2)
     clear_screen()
     pen.goto(0,0)
     hue_steps = 72
@@ -210,7 +214,9 @@ def spirograph(duration=10):
     time.sleep(2)
 
 def starburst(duration=10):
+    print(spacer1)
     print(a3)
+    print(spacer2)
     clear_screen()
     pen.penup()
     pen.goto(0, 0)
@@ -231,7 +237,9 @@ def starburst(duration=10):
     time.sleep(2)
 
 def sgiri():
+    print(spacer1)
     print(a4)
+    print(spacer2)
     clear_screen()
     pen.penup()
     pen.goto(0, -50)
@@ -257,7 +265,9 @@ def sgiri():
     time.sleep(2)
 
 def triangle():
+    print(spacer1)
     print(a5)
+    print(spacer2)
     clear_screen()
     pen.penup()
     pen.goto(0, 0)
@@ -275,7 +285,9 @@ def triangle():
     time.sleep(3)
 
 def rose():
+    print(spacer1)
     print(a6)
+    print(spacer2)
     pen.reset()
     clear_screen()
     pen.speed(0)
@@ -297,7 +309,9 @@ def hexagon():
     pen.penup()
     pen.goto(0, 0)
     pen.pendown()
+    print(spacer1)
     print(a2)
+    print(spacer2)
     things = ['red', 'yellow', 'green', 'purple', 'blue', 'orange']
     for x in range(200):
         pen.pencolor(things[x%6])
