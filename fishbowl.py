@@ -20,39 +20,7 @@ a1 = r"""
      \   \ ;    |   | ,'                             \   \ ;        `---`         `---`     |   ,.'       
       '---"     `----'                                '---"                                 '---'         
                                                                          ,----,                     
-               ,----..             ____  ,-.----.                      ,/   .`|                     
-  ,----..     /   /   \          ,'  , `.\    /  \                   ,`   .'  :   ,---,.,-.----.    
- /   /   \   /   .     :      ,-+-,.' _ ||   :    \          ,--,  ;    ;     / ,'  .' |\    /  \   
-|   :     : .   /   ;.  \  ,-+-. ;   , |||   |  .\ :       ,'_ /|.'___,/    ,',---.'   |;   :    \  
-.   |  ;. /.   ;   /  ` ; ,--.'|'   |  ;|.   :  |: |  .--. |  | :|    :     | |   |   .'|   | .\ :  
-.   ; /--` ;   |  ; \ ; ||   |  ,', |  ':|   |   \ :,'_ /| :  . |;    |.';  ; :   :  |-,.   : |: |  
-;   | ;    |   :  | ; | '|   | /  | |  |||   : .   /|  ' | |  . .`----'  |  | :   |  ;/||   |  \ :  
-|   : |    .   |  ' ' ' :'   | :  | :  |,;   | |`-' |  | ' |  | |    '   :  ; |   :   .'|   : .  /  
-.   | '___ '   ;  \; /  |;   . |  ; |--' |   | ;    :  | | :  ' ;    |   |  ' |   |  |-,;   | |  \  
-'   ; : .'| \   \  ',  / |   : |  | ,    :   ' |    |  ; ' |  | '    '   :  | '   :  ;/||   | ;\  \ 
-'   | '/  :  ;   :    /  |   : '  |/     :   : :    :  | : ;  ; |    ;   |.'  |   |    \:   ' | \.' 
-|   :    /    \   \ .'   ;   | |`-'      |   | :    '  :  `--'   \   '---'    |   :   .':   : :-'   
- \   \ .'      `---`     |   ;/          `---'.|    :  ,      .-./            |   | ,'  |   |.'     
-  `---`                  '---'             `---`     `--`----'                `----'    `---'       
-                                                                                                    
-                                                                                                          
-                                                                            
-                                                  ,--.                      
-  .--.--.     ,----..     ,---,    ,---,.       ,--.'|  ,----..      ,---,. 
- /  /    '.  /   /   \ ,`--.' |  ,'  .' |   ,--,:  : | /   /   \   ,'  .' | 
-|  :  /`. / |   :     :|   :  :,---.'   |,`--.'`|  ' :|   :     :,---.'   | 
-;  |  |--`  .   |  ;. /:   |  '|   |   .'|   :  :  | |.   |  ;. /|   |   .' 
-|  :  ;_    .   ; /--` |   :  |:   :  |-,:   |   \ | :.   ; /--` :   :  |-, 
- \  \    `. ;   | ;    '   '  ;:   |  ;/||   : '  '; |;   | ;    :   |  ;/| 
-  `----.   \|   : |    |   |  ||   :   .''   ' ;.    ;|   : |    |   :   .' 
-  __ \  \  |.   | '___ '   :  ;|   |  |-,|   | | \   |.   | '___ |   |  |-, 
- /  /`--'  /'   ; : .'||   |  ''   :  ;/|'   : |  ; .''   ; : .'|'   :  ;/| 
-'--'.     / '   | '/  :'   :  ||   |    \|   | '`--'  '   | '/  :|   |    \ 
-  `--'---'  |   :    / ;   |.' |   :   .''   : |      |   :    / |   :   .' 
-             \   \ .'  '---'   |   | ,'  ;   |.'       \   \ .'  |   | ,'   
-              `---`            `----'    '---'          `---`    `----'     
-                                                                            
-  """
+ """
 
 a2 = r"""
                                ░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░▒▓███████▓▒░                       
@@ -153,7 +121,7 @@ a6 = r"""      _  ___ ___ _   _
                                                           """
 
 spacer1 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-spacer2="\n\n\n\n\n\n\n\n\n\n"
+spacer2="\n\n"
 
 time.sleep(2)
 
@@ -205,6 +173,10 @@ def spirograph(duration=10):
     start_time = time.time()
     angle = 0
     while time.time() - start_time < duration:
+        print(spacer1)
+        print(a1)
+        if (angle//10)%2==1:
+            print("\n")
         pen.pencolor(colors[angle % hue_steps])
         pen.circle(100)
         pen.left(10)
@@ -228,6 +200,11 @@ def starburst(duration=10):
     start_time = time.time()
     angle = 0
     while time.time() - start_time < duration:
+        print(spacer1)
+        print(a3)
+        print(spacer2)
+        if (angle//10)%2==1:
+            print("\n")
         pen.pencolor(colors[angle % hue_steps])
         pen.forward(200)
         pen.backward(200)
@@ -249,6 +226,10 @@ def sgiri():
         g2 = 195
         b2 = 156
         for i in range(15):
+            print(spacer1)
+            print(a4)
+            print(spacer2)
+            print("\n"*(i%6))
             pen.pencolor(int(r2),int(g2),int(b2))
             r2 = 105-i*105/15
             g2 = 195-i*195/15
@@ -276,6 +257,10 @@ def triangle():
     b = 46
     for i in range(100):
      pen.pencolor(int(r),int(g), int(b))
+     print(spacer1)
+     print(a5)
+     print(spacer2)
+     print("\n"*(i//10))
      r = 189-i*189/100
      g = 97-i*97/100
      b = 46-i*46/100
@@ -296,6 +281,11 @@ def rose():
     pen.pendown()
     pen.pencolor(255, 0, 163)
     for i in range(200):
+     print(spacer1)
+     print(a6)
+     print(spacer2)
+     if (i//3)%2==1:
+        print("\n"*((i//3)%4))
      pen.pencolor(255, i, 163)
      pen.circle(100, 60-i)
      pen.left(i)
@@ -313,6 +303,11 @@ def hexagon():
     print(spacer2)
     things = ['red', 'yellow', 'green', 'purple', 'blue', 'orange']
     for x in range(200):
+        print(spacer1)
+        print(a2)
+        print(spacer2)
+        if (x//5)%2==1:
+            print("\n")
         pen.pencolor(things[x%6])
         pen.width(x/100 + 1)
         pen.forward(x)
